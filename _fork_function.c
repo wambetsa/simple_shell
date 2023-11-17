@@ -1,18 +1,17 @@
-#include "main.h"
+#include "shell.h"
 /**
- * _forkfunction - create a fork
- *@arg: command values path
- *@av: program nm
- *@env: env
- *@lineptr: user commandline
- *@np: process id
- *@c: new test checker
- *Return: 0
+ * _fork_fun - function that create a fork
+ *@arg: command and values path
+ *@av: Has the name of our program
+ *@env: environment
+ *@lineptr: command line for the user
+ *@np: id of proces
+ *@c: Checker add new test
+ *Return: 0 success
  */
 
-int _forkfunction(char **arg, char **av, char **env, char *lineptr, int np, int c)
+int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c)
 {
-	/*initialize vars*/
 	pid_t child;
 	int status;
 	char *format = "%s: %d: %s: not found\n";

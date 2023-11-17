@@ -1,10 +1,10 @@
-#include "main.h"
-
+#include "shell.h"
 /**
- *_strcat - copy str
- *@dest: dest char
- *@src: src char
+ *_strcat - copy string to another string.
+ *@dest: char
+ *@src: char
  *Return: dest
+ *
  */
 
 char *_strcat(char *dest, char *src)
@@ -27,9 +27,9 @@ char *_strcat(char *dest, char *src)
 }
 
 /**
- * _strcmp - compares str values
- * @s1: first char
- * @s2: second char
+ * _strcmp - compare the values of a string
+ * @s1: character
+ * @s2: character
  * Return: 0
  */
 
@@ -46,9 +46,9 @@ int _strcmp(char *s1, char *s2)
 }
 
 /**
- * _strlen - copies string
- * @s: pointer
- * Return: pointer char
+ * _strlen - copies the string pointed to by src into dest
+ * @s: A pointer
+ * Return: char pointer to dest
  */
 
 int _strlen(char *s)
@@ -64,10 +64,10 @@ int _strlen(char *s)
 }
 
 /**
- *_strncmp - compares two strings.
- *@s1: first string
- *@s2: second string
- *@n: char nums
+ *_strncmp -  function that compares two strings.
+ *@s1: string one
+ *@s2: string two
+ *@n: number of characters
  * Return: diference
  */
 
@@ -88,9 +88,11 @@ size_t _strncmp(char *s1, char *s2, size_t n)
 }
 
 /**
- * _strcpy - copies string
- * @dest: copy dest @src: copy source
- * Return: dest pointer
+ * _strcpy - copies the string pointed to by src into dest
+ * @dest: destination of the copy
+ * @src: source of the copy
+ *
+ * Return: char pointer to dest
  */
 
 char *_strcpy(char *dest, char *src)

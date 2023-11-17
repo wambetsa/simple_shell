@@ -1,9 +1,9 @@
-#include "main.h"
+#include "shell.h"
 /**
- * _exit_command - close the simple_shell when
- * @arg: direction argument ptr
- * @lineptr: input str
- * @_exit: exit val
+ * _exit_command - this function closes the simple_shell when
+ * @arg: pointer with the direction argument.
+ * @lineptr: standar input string
+ * @_exit: value of exit
  * Return: None
  */
 void _exit_command(char **arg, char *lineptr, int _exit)
@@ -24,7 +24,7 @@ void _exit_command(char **arg, char *lineptr, int _exit)
 }
 
 /**
- *_getenv - get env
+ *_getenv - function to get all env
  *@env: enviroment
  *Return: 0
  */

@@ -1,15 +1,14 @@
-#include "main.h"
+#include "shell.h"
 /**
- * _getline - printer wait for the user type something.
- * Return: str line of user input
+ * _getline_command - print "#cisfun$ " and wait for the user type something.
+ * Return: line of string input for user
  */
 
-char *_getline(void)
+char *_getline_command(void)
 {
-	/*declare and initialize vars*/
 	char *lineptr = NULL;
 	size_t charter_user = 0;
-	/*if stt*/
+
 	if (isatty(STDIN_FILENO))
 		write(STDOUT_FILENO, "$ ", 2);
 
@@ -18,6 +17,6 @@ char *_getline(void)
 		free(lineptr);
 		return (NULL);
 	}
-	/*return*/
+
 	return (lineptr);
 }
