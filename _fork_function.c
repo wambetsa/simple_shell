@@ -1,13 +1,13 @@
-#include "shell.h"
+#include "my_shell.h"
 /**
  * _fork_fun - function that create a fork
- *@arg: command and values path
- *@av: Has the name of our program
- *@env: environment
- *@lineptr: command line for the user
- *@np: id of proces
- *@c: Checker add new test
- *Return: 0 success
+ *@arg: command values path
+ *@av: program nm
+ *@env: env
+ *@lineptr: user commandline
+ *@np: process id
+ *@c: new test checker
+ *Return: 0
  */
 
 int _fork_fun(char **arg, char **av, char **env, char *lineptr, int np, int c)

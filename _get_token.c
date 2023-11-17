@@ -1,4 +1,4 @@
-#include "shell.h"
+#include "my_shell.h"
 /**
  * _get_token - get token of string
  * @lineptr: comman user
@@ -7,13 +7,16 @@
 
 char **_get_token(char *lineptr)
 {
+	/*declare and initialize var*/
 	char **user_command = NULL;
 	char *token = NULL;
 	size_t i = 0;
 	int size = 0;
+	/*if stt*/
 
 	if (lineptr == NULL)
 		return (NULL);
+	/*for loop*/
 
 	for (i = 0; lineptr[i]; i++)
 	{
@@ -25,6 +28,7 @@ char **_get_token(char *lineptr)
 	user_command = malloc(sizeof(char *) * (size + 2));
 	if (user_command == NULL)
 		return (NULL);
+	/*token*/
 
 	token = _strtok(lineptr, " \n\t\r");
 	for (i = 0; token != NULL; i++)
@@ -33,5 +37,6 @@ char **_get_token(char *lineptr)
 		token = _strtok(NULL, " \n\t\r");
 	}
 	user_command[i] = NULL;
+	/*return user_input*/
 	return (user_command);
 }
